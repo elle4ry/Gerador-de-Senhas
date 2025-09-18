@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jersey+10&family=Langar&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de senhas</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <div class="blocoPrincipal">
+    <h1>Gerador de senhas</h1>
+    <form>
+      <label class="blocoDoTamanho">
+        <span class="opçoesDSenha">Tamanho da senha</span>
+        <input id="tamanhoSenha" type="number" min="4" required />
+      </label>
+
+      <label class="switchCustomizado">
+        <span class="opçoesDSenha">Incluir letras maiúsculas</span>
+        <div class="switchTroca">
+          <input id="letrasMaiusculas" type="checkbox" />
+          <span class="switchBotao"></span>
+        </div>
+      </label>
+
+      <label class="switchCustomizado">
+        <span class="opçoesDSenha">Incluir letras minusculas</span>
+        <div class="switchTroca">
+          <input id="letrasMinusculas" type="checkbox" />
+          <span class="switchBotao"></span>
+        </div>
+      </label>
+
+      <label class="switchCustomizado">
+
+        <span></span>
+        <span class="opçoesDSenha">Incluir números</span>
+        <div class="switchTroca">
+          <input id="adicionarNumeros" type="checkbox" />
+          <span class="switchBotao"></span>
+        </div>
+      </label>
+
+      <label class="switchCustomizado">
+        <span class="opçoesDSenha">Incluir símbolos</span>
+
+        <span></span>
+
+        <div class="switchTroca">
+          <input id="adicionarSimbolos" type="checkbox" />
+          <span class="switchBotao"></span>
+        </div>
+      </label>
+
+      <button type="button" id="botaoGerar">Gerar!</button>
+    </form>
+    <div class="divisor">a</div>
+    <div class="copiarSenha">
+      <input class="senha" id="senhaGerada" type="text" readonly />
+      <button id="botaoDeCopiarSenha" class="botaoDcopiar" onclick="copiarTexto()">
+        <img class="imagemDcopiar" src="./img/copia.png">
+      </button>
+    </div>
+    <span id="mensagemCopiado">Senha copiada com sucesso!</span>
+    <span id="mensagemDeErro">Campo de senha está vazio</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 5vh;
+}
+
+body {
+
+    background-image: url("./img/imgDfundo.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#tamanhoSenha {
+    max-width: 190px;
+    outline: none;
+    border: 1px solid #dadada;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #f3f7fe;
+    transition: .3s;
+    color: #000000;
+}
+
+#tamanhoSenha:focus {
+    border: 1px solid #18523b;
+    box-shadow: 0 0 0 4px #22bb8d5f
+}
+
+.opçoesDSenha {
+    padding-right: 0.4rem;
+    font-size: 1.3rem;
+}
+
+.blocoPrincipal {
+    width: 56vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(224, 224, 224);
+    padding: 20px 0px;
+    border: 5px solid rgb(142, 165, 149);
+    box-shadow: 0px 0px 28px -2px rgba(0, 0, 0, 0.65);
+    -webkit-box-shadow: 0px 0px 28px -2px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 0px 28px -2px rgba(0, 0, 0, 0.65);
+    border-radius: 13px;
+
+}
+
+form {
+    margin: 17px 0px 20px 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 12px;
+}
+
+input[type="number"] {
+    appearance: none;
+    width: 46px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*SWITCH CUSTOMIZADO DE CHECK*/
+
+.switchCustomizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* .switchCustomizado .switchText{
+    padding-right: 0.4rem;
+    font-size: 1.2rem;
+} */
+
+.switchCustomizado .switchTroca {
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    position: relative;
+}
+
+.switchCustomizado .switchTroca .switchBotao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color: gray;
+}
+
+.switchCustomizado .switchTroca input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switchCustomizado .switchTroca .switchBotao::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .4s all ease;
+    background-color: aliceblue;
+}
+
+.switchCustomizado .switchTroca input:checked+.switchBotao {
+    background-color: rgb(102, 161, 12);
+}
+
+.switchCustomizado .switchTroca input:checked+.switchBotao::before {
+    transform: translateX(20px);
+}
+
+.divisor {
+    color: #00000000;
+    background-color: rgb(142, 165, 149);
+    height: 2px;
+    width: 75%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 37px;
+    margin: 17px 0px 0px 0px;
+    width: 28%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid green;
+}
+
+button::before {
+    content: 'done✅';
+    position: absolute;
+    color: #3b82f6;
+    left: 0;
+    top: -14px;
+    right: 0;
+    transition: all ease 300ms;
+    opacity: 0%;
+}
+
+.senha {
+    font-size: 34px;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+    height: 78px;
+    width: 21rem;
+    border: 1px solid green;
+}
+
+.copiarSenha {
+    display: flex;
+    border-radius: 1rem;
+}
+
+.botaoDcopiar {
+    margin: 0;
+    width: 70px;
+    height: 80px;
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.imagemDcopiar {
+    width: 50px;
+    height: 50px;
+}
+
+#mensagemCopiado{
+    color: rgb(0, 117, 25)
+}
+
+#mensagemDeErro{
+    color: rgba(131, 0, 0, 0.548);
+}
+
+#mensagemCopiado,
+#mensagemDeErro {
+    display: none; /* Agora inicia sempre oculto por padrão */
+    margin-top: 10px;
+    font-weight: bold;
+}
